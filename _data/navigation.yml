@@ -26,8 +26,10 @@ main:
   #  - title: "Portfolio"
   #  url: /portfolio/
         
-  - title: "Blog Posts"
-    url: /year-archive/
+        # later
+  # - title: "Blog Posts"
+    #url: /blog/
+  #  url: /year-archive/
 
 
   - title: "Awards"
@@ -40,7 +42,8 @@ main:
   #   url: /cv-json/
 
   - title: "CV"
-    url: /files/CV_ISAH.pdf
+    url: /cv/
+  #  url: /files/CV_ISAH.pdf
     
   # - title: "Guide"
   #  url: /markdown/

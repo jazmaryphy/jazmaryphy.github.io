@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Bio."
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,7 +9,7 @@ redirect_from:
 
 **Muon Spin Spectroscopy • Computational Materials Science • Density Functional Theory • Quantum Materials**
 
-I am a computational materials scientist specializing in muon-spin spectroscopy (μSR), electronic structure calculations, and atomistic simulations.
+I am a computational materials scientist specializing in muon-spin spectroscopy ($\mu$SR), electronic structure calculations, and atomistic simulations.
 
 My research combines density functional theory (DFT), high-performance computing, and experimental local-probe techniques to investigate magnetic, superconducting, and strongly correlated materials.
 

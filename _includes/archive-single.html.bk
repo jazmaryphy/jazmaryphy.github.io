@@ -40,11 +40,8 @@
 
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-        
         {% elsif post.collection == 'publications' %}
-        {% comment %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-         {% endcomment %}
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
@@ -55,38 +52,33 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    <!-- 1. Render the main citation text string first -->
-    {% if post.citation %}
-      <p style="margin-bottom: 0.25em;">{{ post.citation }}</p>
+    {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.citation and post.paperurl and post.slidesurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.citation and post.paperurl and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.citation and post.paperurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a></p>
+    {% elsif post.citation and post.slidesurl and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl}}">Download Bibtex</a></p>
+    {% elsif post.citation and post.slidesurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.citation and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.citation %}
+      <p>Recommended citation: {{ post.citation }}</p>
+    {% elsif post.paperurl and post.bibtexurl %}
+      <p><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.paperurl %}
+      <p><a href="{{ post.paperurl }}">Download Paper</a></p>
+    {% elsif post.slidesurl and post.bibtexurl %}
+      <p><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.slidesurl %}
+      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.bibtexurl %}
+      <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% endif %}
-
-    <!-- 2. Clean Inline Shortcut Action Button Links -->
-    <p style="margin-top: 0; margin-bottom: 1em; font-size: 1.1em;">
-      {% if post.paperurl %}
-        <a href="{{ post.paperurl }}" target="_blank" title="Go to Publication Link" style="text-decoration: none; margin-right: 8px; color: #49b6e7;">
-          <i class="fas fa-fw fa-link" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-      
-      {% if post.downloadurl %}
-        <a href="{{ post.downloadurl }}" target="_blank" title="Download PDF" style="text-decoration: none; margin-right: 8px; color: #49b6e7;">
-          <i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-
-      {% if post.slidesurl %}
-        <a href="{{ post.slidesurl }}" target="_blank" title="Download Slides" style="text-decoration: none; margin-right: 8px; color: #49b6e7;">
-          <i class="fas fa-fw fa-window-maximize" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-
-      {% if post.bibtexurl %}
-        <a href="{{ post.bibtexurl }}" target="_blank" title="Download BibTeX" style="text-decoration: none; margin-right: 8px; color: #49b6e7;">
-          <i class="fas fa-fw fa-quote-right" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-    </p>
-
 
   </article>
 </div>
