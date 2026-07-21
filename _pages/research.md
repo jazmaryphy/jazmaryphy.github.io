@@ -7,7 +7,7 @@ author_profile: true
 
 # Research Interests
 
-- Muon Spin Rotation (μSR)
+- Muon Spin Rotation ($\mu$SR)
 - Density Functional Theory
 - Computational Materials Science
 - Magnetism
@@ -16,9 +16,11 @@ author_profile: true
 - Quantum Materials
 - High-throughput Materials Simulations
 
+<!--
 # Current Projects
 
 - Re-based double perovskites
 - Muon-site automation
 - Strong spin-orbit coupling materials
 - Molecular nanomagnets
+-->
