@@ -1,0 +1,5 @@
+- ISMS Young Scientist Best Poster Award (2020)
+- Italian Ministry of Education PhD Scholarship (2019)
+- UNESCO/IAEA Study Grant (2017)
+- Best Master's Graduate Award (2017)
+- Prof. G.G. Parfitt Prize (2016)
