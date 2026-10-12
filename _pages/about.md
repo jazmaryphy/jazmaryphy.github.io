@@ -29,7 +29,7 @@ I am currently a Postdoctoral Research Fellow at the University of Bologna worki
 
 ## Now
 
-I am currently seeking full(part)-time opportunities in **Computational Materials Science**, and **Data Science / R&D**. 
+I am currently seeking full-time (or part-time) opportunities in **Computational Materials Science**, and **Data Science / R&D**. 
 
 * **Looking for:** Postdoctoral, Industry R&D, or Staff Scientist positions starting late 2026 / early 2027.
 * **Open to:** Relocation and remote opportunities.
