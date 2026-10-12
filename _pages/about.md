@@ -22,5 +22,17 @@ My work focuses on:
 - Magnetism and superconductivity
 - Software development for μSR simulations
 
+
+<!-- 
 I am currently a Postdoctoral Research Fellow at the University of Bologna working with Dr. Samuele Sanna.
+-->
+
+## Now
+
+I am currently seeking full(part)-time opportunities in **Computational Materials Science**, and **Data Science / R&D**. 
+
+* **Looking for:** Postdoctoral, Industry R&D, or Staff Scientist positions starting late 2026 / early 2027.
+* **Open to:** Relocation and remote opportunities.
+
+
 
